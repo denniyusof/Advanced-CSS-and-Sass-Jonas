@@ -2,6 +2,10 @@
   max-width: $grid-width;
   margin-inline: auto;
 
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+
   @include clearfix;
 
   [class^="col-"] {
