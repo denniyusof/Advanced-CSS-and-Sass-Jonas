@@ -3,7 +3,15 @@
   margin-inline: auto;
 
   &:not(:last-child) {
-    margin-bottom: 8rem;
+    margin-bottom: $gutter-vertical;
+
+    @include responsive(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include responsive(tab-port) {
+    max-width: 50rem;
   }
 
   @include clearfix;
@@ -13,11 +21,16 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
-    }
-  }
 
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
+      @include responsive(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include responsive(tab-port) {
+      width: 100% !important;
+    }
   }
 
   .col-1-of-2 {
