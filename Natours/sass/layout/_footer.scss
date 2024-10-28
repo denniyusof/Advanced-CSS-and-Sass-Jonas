@@ -65,5 +65,10 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include responsive(tab-port) {
+      width: 100%;
+      float: none;
+    }
   }
 }
